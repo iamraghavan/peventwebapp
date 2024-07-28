@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% include 'components/hero_section.html' %}
+
+<!-- About the Event -->
+
+<div class="about-us-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-us-image">
+                    <picture>
+                        <source srcset="https://via.placeholder.com/800x800.jpg" type="">
+                        <img src="https://via.placeholder.com/800x800.jpg" alt="image">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="about-us-content">
+                    <span>Lorem ipsum dolor sit amet</span>
+                    <h3>ABOUT THIS EVENT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis bibendum auctor. Nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh.</p>
+
+                    <ul class="list">
+                        <li><i class="bx bx-check"></i> Lorem ipsum dolor sit amet</li>
+                        <li><i class="bx bx-check"></i> Lorem ipsum dolor sit amet</li>
+                        <li><i class="bx bx-check"></i> Lorem ipsum dolor sit amet</li>
+                        <li><i class="bx bx-check"></i> Lorem ipsum dolor sit amet</li>
+                    </ul>
+
+                    <div class="about-btn">
+                        <a href="" class="default-btn"><i class="bx bx-chevron-right"></i> About Us <span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Feature / Benefits -->
+
+<div class="benefits-area pt-100 pb-75" x-data="{ benefits: [
+{ icon: 'https://cdn-icons-png.flaticon.com/512/2920/2920073.png', title: 'Get Inspired', description: 'Get motivated by industry leaders and innovators who will share their success stories and strategies.' },
+{ icon: 'https://cdn-icons-png.flaticon.com/512/2651/2651004.png', title: 'Meet New Faces', description: 'Expand your professional network by meeting new people, from peers to mentors, in various industries.' },
+{ icon: 'https://cdn-icons-png.flaticon.com/512/4760/4760444.png', title: 'Fresh Tech Insights', description: 'Stay updated with the latest technological advancements and how they can benefit your business or career.' },
+{ icon: 'https://cdn-icons-png.flaticon.com/512/1256/1256655.png', title: 'Networking Session', description: 'Join dedicated networking sessions to build meaningful connections with other professionals.' },
+{ icon: 'https://cdn-icons-png.flaticon.com/512/3905/3905597.png', title: 'Global Event', description: 'Be a part of a global event that brings together diverse perspectives and experiences from around the world.' },
+{ icon: 'https://cdn-icons-png.flaticon.com/512/1680/1680005.png', title: 'Free Swags', description: 'Enjoy exclusive giveaways and swags that are a token of our appreciation for your participation.' }
+] }">
+<div class="container">
+    <div class="section-title">
+        <h2>Who Benefits ?</h2>
+    </div>
+
+    <div class="row justify-content-center">
+        <template x-for="benefit in benefits" :key="benefit.title">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-benefits">
+                    <img :src="benefit.icon" alt="icon" style="width: 100px; height: 100px;">
+                    <h3 x-text="benefit.title"></h3>
+                    <p x-text="benefit.description"></p>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+</div>
+
+
+{% include 'components/session.html' %}
+
+{% endblock %}

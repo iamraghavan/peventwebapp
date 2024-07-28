@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Animate CSS --> 
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/boxicons.min.css' %}">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <!-- Carousel Default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/dark.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+    {% block extra_head %}{% endblock %}
+
+</head>
+<body>
+    
+    {% include 'components/navbar.html' %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+  
+
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Meanmenu JS -->
+    <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- Owl Carousel JS -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- Jquery Appear JS -->
+    <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+    <!-- Odometer JS -->
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+    <!-- Magnific Popup JS -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Ajaxchimp JS -->
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    <!-- Form Validator JS -->
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <!-- Wow JS -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
